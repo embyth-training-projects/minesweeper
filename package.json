@@ -1,0 +1,42 @@
+{
+  "name": "minesweeper",
+  "version": "1.0.0",
+  "description": "Learning JavaScript on minesweeper game",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:embyth/minesweeper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/embyth/minesweeper/issues"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.10",
+    "cross-env": "^7.0.2",
+    "del": "^5.1.0",
+    "eslint": "^7.4.0",
+    "eslint-config-htmlacademy": "0.5.2",
+    "gh-pages": "^3.1.0",
+    "gulp": "^4.0.2",
+    "gulp-newer": "^1.4.0",
+    "gulp-zip": "^5.0.2",
+    "husky": "^4.2.5",
+    "readable-stream": "^3.6.0"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "scripts": {
+    "test": "eslint \"js/**/*.js\"",
+    "start": "gulp",
+    "build": "cross-env NODE_ENV=production gulp build",
+    "deploy": "npm run build && gh-pages -d build",
+    "dist": "npm run build && gulp zip"
+  },
+  "engines": {
+    "node": "8.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test"
+    }
+  }
+}
