@@ -4,15 +4,38 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <script src="js/app.js"></script>
   <title>Minesweeper</title>
 </head>
 
 <body>
+  <!-- Title -->
+  <h1>💣 <b>Minesweeper</b> on vanilla <span>JavaScript</span></h1>
 
+  <!-- Flags counter -->
+  <b class="flags-counter">🚩 left: <span>20</span></b>
 
+  <!-- Game Area -->
+  <div class="game-field"></div>
 
+  <!-- Game reload button -->
+  <button class="reset" type="button">🔄 Reload</button>
+
+  <!-- Game state messages -->
+  <!-- Win message -->
+  <div class="win-message message hidden">
+    <p class="win-message__text">🏆 You are a Champ! 💪😎🤙</p>
+    <button class="win-message__close" type="button">❌</button>
+  </div>
+  <!-- Lose message -->
+  <div class="lose-message message hidden">
+    <p class="lose-message__text">💥 BOOM! You lose 🤕</p>
+    <button class="lose-message__again" type="button">🕹️ Try again</button>
+    <button class="lose-message__close" type="button">❌</button>
+  </div>
+
+  <script src="js/app.js"></script>
 </body>
 
 </html>
